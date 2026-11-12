@@ -1,0 +1,47 @@
+[
+  {
+    "id": "progenitores-hematopoyeticos",
+    "termino": "Progenitores hematopoyéticos",
+    "definicion": "Células madre de la sangre. Fabrican los glóbulos rojos, los glóbulos blancos y las plaquetas. Se obtienen de la médula ósea, de la sangre periférica o de la sangre del cordón umbilical."
+  },
+  {
+    "id": "medula-osea",
+    "termino": "Médula ósea",
+    "definicion": "Tejido blando del interior de los huesos donde se fabrican las células de la sangre. No es la médula espinal."
+  },
+  {
+    "id": "sangre-periferica",
+    "termino": "Sangre periférica",
+    "definicion": "La sangre que circula por las venas. Tras una medicación, contiene suficientes células madre para recogerlas sin pasar por quirófano."
+  },
+  {
+    "id": "aferesis",
+    "termino": "Aféresis",
+    "definicion": "Técnica en la que una máquina separa de la sangre solo las células que se necesitan y devuelve el resto al donante."
+  },
+  {
+    "id": "sangre-cordon",
+    "termino": "Sangre de cordón umbilical",
+    "definicion": "Sangre que queda en el cordón y la placenta tras el parto. Es rica en células madre y puede donarse en maternidades autorizadas."
+  },
+  {
+    "id": "hla",
+    "termino": "HLA",
+    "definicion": "Antígenos leucocitarios humanos: marcadores de las células que el sistema inmunitario usa para reconocer lo propio. Donante y paciente deben tener un HLA lo más parecido posible."
+  },
+  {
+    "id": "factor-crecimiento",
+    "termino": "Factor estimulante de colonias",
+    "definicion": "Medicación que se inyecta unos días antes de donar sangre periférica para que las células madre salgan de la médula ósea a la sangre."
+  },
+  {
+    "id": "trasplante-alogenico",
+    "termino": "Trasplante alogénico",
+    "definicion": "Trasplante en el que las células proceden de otra persona, familiar o no. Es el que hace posible la donación altruista."
+  },
+  {
+    "id": "redmo",
+    "termino": "REDMO",
+    "definicion": "Registro Español de Donantes de Médula Ósea. Reúne los datos de las personas inscritas y busca donantes compatibles para pacientes de España y de otros países."
+  }
+]

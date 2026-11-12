@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PROVISIONAL: sustituir por la imagen de Stitch (mismo nombre). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="176dp"
+    android:viewportWidth="360"
+    android:viewportHeight="176">
+    <path android:fillColor="#FFA9EDFF" android:pathData="M0,0h360v176h-360z" />
+    <path android:fillColor="#FF83D2E6" android:pathData="M220,-20a110,110 0,1 0,220 0a110,110 0,1 0,-220 0z" />
+    <path android:fillColor="#FFC7EAE1" android:pathData="M-40,150a90,90 0,1 0,180 0a90,90 0,1 0,-180 0z" />
+    <!-- Gota con corazón -->
+    <path android:fillColor="#FF1F7A8C" android:pathData="M180,30C180,30 140,72 140,98c0,22 18,38 40,38s40,-16 40,-38C220,72 180,30 180,30z" />
+    <path android:fillColor="#FFFF8162" android:pathData="M180,122l-4,-3.6C162,106 153,98 153,88c0,-8 6,-14 14,-14 4.5,0 9,2 13,6 4,-4 8.5,-6 13,-6 8,0 14,6 14,14 0,10 -9,18 -23,30.4z" />
+</vector>

@@ -1,0 +1,265 @@
+<resources>
+    <string name="app_name">Dona Vida</string>
+
+    <!-- Pestañas de la barra inferior -->
+    <string name="pestana_inicio">Inicio</string>
+    <string name="pestana_centros">Centros</string>
+    <string name="pestana_como_funciona">Cómo funciona</string>
+    <string name="pestana_mi_donacion">Mi donación</string>
+
+    <!-- Títulos de pantalla -->
+    <string name="titulo_ficha_centro">Ficha Centro</string>
+    <string name="titulo_como_funciona">Cómo funciona</string>
+    <string name="titulo_mi_donacion">Mi donación</string>
+    <string name="titulo_historias">Historias</string>
+    <string name="titulo_mitos">Mitos y preguntas frecuentes</string>
+    <string name="titulo_privacidad">Privacidad</string>
+
+    <!-- Barra superior -->
+    <string name="cd_notificaciones">Notificaciones</string>
+    <string name="cd_perfil">Perfil</string>
+
+    <!-- Marcadores provisionales -->
+    <string name="marcador_en_construccion">Pantalla en construcción.</string>
+
+    <!-- Inicio: saludo -->
+    <string name="inicio_saludo">Hola, %1$s</string>
+    <string name="inicio_saludo_sin_nombre">Hola</string>
+    <string name="inicio_saludo_emoji" translatable="false">👋</string>
+    <string name="inicio_estado_redmo">REDMO Activo</string>
+    <string name="inicio_subtitulo">Cada día cuenta para quienes esperan una oportunidad de vida.</string>
+
+    <!-- Inicio: hazte donante -->
+    <string name="inicio_cta_etiqueta">PASO ALTRUISTA</string>
+    <string name="inicio_cta_badge">Voluntario</string>
+    <string name="inicio_cta_titulo">¿Quieres hacerte donante?</string>
+    <!-- TODO: sustituir por el texto exacto del HTML de Stitch. -->
+    <string name="inicio_cta_texto">Inscribirte en el Registro de Donantes de Médula Ósea es sencillo: te informan, firmas el consentimiento y te toman una pequeña muestra para conocer tu tipaje. Así podrás ayudar a un paciente que lo necesite.</string>
+    <string name="inicio_chip_edad">Edad: 18 a 40 años</string>
+    <string name="inicio_chip_muestra">Una sola muestra</string>
+    <string name="inicio_chip_registro">Registro REDMO</string>
+    <string name="inicio_cta_boton">Buscar un centro cerca</string>
+
+    <!-- Inicio: dato -->
+    <string name="inicio_dato_cifra">1 entre 4.000</string>
+    <string name="inicio_dato_texto">Esa es la probabilidad de ser la esperanza de compatibilidad única para un paciente de leucemia.</string>
+
+    <!-- Inicio: el camino -->
+    <string name="inicio_proceso_titulo">¿Cómo es el camino?</string>
+    <string name="inicio_proceso_etapas">3 etapas sencillas</string>
+    <string name="inicio_paso1_titulo">Registro y análisis HLA</string>
+    <!-- TODO: sustituir las tres descripciones por el texto exacto del HTML de Stitch. -->
+    <string name="inicio_paso1_texto">Te informas en un centro, firmas el consentimiento y se analiza tu muestra para conocer tu tipaje HLA.</string>
+    <string name="inicio_paso2_titulo">Espera activa en el registro</string>
+    <string name="inicio_paso2_texto">Tus datos quedan en REDMO, disponibles para pacientes de todo el mundo. Solo tienes que mantener tu contacto al día.</string>
+    <string name="inicio_paso3_titulo">Donación sólo si hay compatibilidad</string>
+    <string name="inicio_paso3_texto">Si coincides con un paciente, te llaman, confirman la compatibilidad y decides si donas.</string>
+    <string name="inicio_proceso_boton">Ver cómo funciona el proceso completo</string>
+
+    <!-- Inicio: tranquilidad -->
+    <string name="inicio_tranquilidad_titulo">Tranquilidad y seguridad</string>
+    <!-- %1$s es inicio_tranquilidad_destacado, que se pinta en negrita. -->
+    <!-- TODO: sustituir por el texto exacto del HTML de Stitch. -->
+    <string name="inicio_tranquilidad_texto">En el %1$s la donación se hace desde la sangre, de forma parecida a donar plaquetas: sin quirófano ni anestesia.</string>
+    <string name="inicio_tranquilidad_destacado">85% de los casos</string>
+
+    <!-- Inicio: ya soy donante -->
+    <string name="inicio_comunidad_etiqueta">Comunidad Donante</string>
+    <string name="inicio_comunidad_titulo">¿Ya eres donante o has donado?</string>
+    <!-- TODO: sustituir por el texto exacto del HTML de Stitch. -->
+    <string name="inicio_comunidad_texto">Sigue aquí las etapas de tu proceso. La Fundación Josep Carreras, que gestiona REDMO, te acompaña en cada paso.</string>
+    <string name="inicio_comunidad_boton">Acceder a Mi donación</string>
+
+    <!-- Inicio: cierre -->
+    <string name="inicio_cierre">Coordinado en España por REDMO y el Sistema Nacional de Salud.</string>
+
+    <!-- Ficha de centro -->
+    <string name="ficha_volver_centros">Volver a centros</string>
+    <string name="ficha_no_encontrado">No hemos encontrado este centro.</string>
+    <string name="ficha_distancia">A %1$s km de ti</string>
+    <string name="ficha_abierto_hasta">Abierto hoy hasta las %1$s</string>
+    <!-- %1$s es el día ("hoy", "mañana", "el lunes") y %2$s, la hora. -->
+    <string name="ficha_cerrado_abre">Cerrado · abre %1$s a las %2$s</string>
+    <string name="ficha_dia_hoy">hoy</string>
+    <string name="ficha_dia_manana">mañana</string>
+    <string name="ficha_dia_semana">el %1$s</string>
+    <string name="ficha_referencia_redmo">Centro regional de referencia para el registro REDMO</string>
+
+    <string name="ficha_accion_llamar">Llamar</string>
+    <string name="ficha_accion_como_llegar">Cómo llegar</string>
+    <string name="ficha_accion_ruta">Ruta GPS</string>
+    <string name="ficha_accion_web">Web oficial</string>
+    <string name="ficha_accion_enlace">Enlace ext.</string>
+
+    <string name="ficha_ubicacion_titulo">Ubicación y accesos</string>
+    <string name="ficha_horario_titulo">Horario</string>
+    <string name="ficha_horario_continuo_titulo">Horario ininterrumpido</string>
+    <string name="ficha_atencion_continua">Atención continua</string>
+    <!-- %1$s apertura, %2$s cierre (con raya larga en medio). -->
+    <string name="ficha_franja_horas">%1$s – %2$s</string>
+
+    <string name="ficha_cita_titulo">¿Hace falta cita previa?</string>
+    <!-- %1$s es el destacado, que se pinta en negrita. -->
+    <string name="ficha_cita_no_obligatoria">%1$s para la toma de muestra de médula ósea, aunque puedes reservarla por teléfono para evitar esperas y agilizar el registro en el laboratorio.</string>
+    <string name="ficha_cita_no_obligatoria_destacado">No es obligatoria</string>
+    <string name="ficha_cita_obligatoria">%1$s; resérvala por teléfono antes de acudir al centro.</string>
+    <string name="ficha_cita_obligatoria_destacado">Es obligatoria</string>
+
+    <string name="ficha_llevar_titulo">¿Qué llevar el día de la cita?</string>
+    <string name="ficha_llevar_documento">%1$s original y en vigor.</string>
+    <string name="ficha_llevar_documento_destacado">DNI, NIE o pasaporte</string>
+    <string name="ficha_llevar_ayunas">%1$s; haber descansado bien e hidratarse con normalidad antes de la extracción.</string>
+    <string name="ficha_llevar_ayunas_destacado">No acudir en ayunas</string>
+    <string name="ficha_llevar_consentimiento">Estar dispuesto a rellenar y firmar el %1$s.</string>
+    <string name="ficha_llevar_consentimiento_destacado">formulario oficial de consentimiento informado</string>
+
+    <string name="ficha_fuente">Información tomada de la web oficial del centro de transfusión de tu comunidad.</string>
+    <string name="ficha_fuente_verificada">Información tomada de la web oficial del centro de transfusión de tu comunidad. Última verificación: %1$s.</string>
+
+    <!-- Lista de centros -->
+    <string name="centros_red_oficial">RED OFICIAL REDMO</string>
+    <string name="centros_titulo">Centros de donación autorizados</string>
+    <string name="centros_subtitulo">Espacios seguros, cercanos y con profesionales dedicados a acompañarte con calidez en tu registro.</string>
+
+    <string name="centros_busqueda_placeholder">Introduce código postal o ciudad (ej. 28006, Valencia, Sevilla…)</string>
+    <string name="centros_busqueda_borrar">Borrar texto</string>
+    <string name="centros_ubicacion_usar">Usar mi ubicación</string>
+    <string name="centros_ubicacion_buscando">Buscando centros cercanos…</string>
+    <string name="centros_ubicacion_detectada">Ubicación detectada</string>
+    <string name="centros_ubicacion_denegada">Permiso denegado · Abrir ajustes</string>
+    <string name="centros_ubicacion_error">No se pudo obtener la ubicación · Reintentar</string>
+    <string name="centros_privacidad">Tu ubicación se usa solo en el móvil y no se envía a ningún servidor.</string>
+
+    <string name="centros_vista_lista">Vista lista</string>
+    <string name="centros_vista_mapa">Vista mapa</string>
+    <plurals name="centros_en_radio">
+        <item quantity="one">%d centro en tu radio</item>
+        <item quantity="many">%d centros en tu radio</item>
+        <item quantity="other">%d centros en tu radio</item>
+    </plurals>
+    <plurals name="centros_total">
+        <item quantity="one">%d centro</item>
+        <item quantity="many">%d centros</item>
+        <item quantity="other">%d centros</item>
+    </plurals>
+    <string name="cd_mapa_centros">Mapa de los centros</string>
+
+    <string name="centros_especialidades">Especialidades</string>
+    <plurals name="centros_especialidades_disponibles">
+        <item quantity="one">%d disponible</item>
+        <item quantity="many">%d disponibles</item>
+        <item quantity="other">%d disponibles</item>
+    </plurals>
+    <string name="servicio_inscripcion_medula">Inscripción médula</string>
+    <string name="servicio_sangre_cordon">Sangre de cordón</string>
+    <string name="servicio_puntos_temporales">Puntos temporales y campañas</string>
+
+    <string name="tipo_centro_transfusion">Centro de transfusión regional</string>
+    <string name="tipo_hospital_publico">Hospital público autorizado</string>
+    <string name="tipo_punto_inscripcion">Punto fijo de inscripción REDMO</string>
+    <string name="tipo_maternidad">Maternidad autorizada</string>
+
+    <!-- %1$s apertura y %2$s cierre, por ejemplo "8:30" y "21:00". -->
+    <string name="centros_abierto_de_a">Abierto hoy de %1$s a %2$s</string>
+    <!-- %1$s es el texto de apertura ("Abierto hoy de…" o "Cerrado · abre…"). -->
+    <string name="centros_requiere_cita">Requiere cita previa · %1$s</string>
+    <string name="centros_requiere_cita_solo">Requiere cita previa</string>
+    <string name="centros_datos_verificados">Datos verificados el %1$s</string>
+    <string name="centros_ver_detalles">Ver detalles</string>
+
+    <string name="centros_dudas_titulo">¿Tienes dudas antes de acudir?</string>
+    <string name="centros_dudas_texto">La toma de muestra inicial es rápida, indolora y no requiere acudir en ayunas.</string>
+
+    <string name="centros_sin_resultados">No hay centros para «%1$s»</string>
+    <string name="centros_sin_resultados_filtro">No hay centros con esta especialidad</string>
+    <string name="centros_borrar_busqueda">Borrar búsqueda</string>
+
+    <!-- Mi donación (prototipo: los datos del donante son de ejemplo) -->
+    <string name="mi_demo_sesion_activa">Sesión activa</string>
+    <string name="mi_demo_sin_sesion">Sin sesión</string>
+
+    <string name="mi_acceso_registro">Registro Español de Donantes de Médula Ósea (REDMO)</string>
+    <string name="mi_acceso_titulo">Consulta el estado de tu donación</string>
+    <!-- TODO: sustituir por el texto exacto del diseño. -->
+    <string name="mi_acceso_texto">Accede con tu identidad para ver en qué punto está tu proceso como donante y el impacto de tu donación, siempre de forma anónima.</string>
+    <string name="mi_acceso_boton">Acceder con el registro oficial de donantes</string>
+    <!-- TODO: sustituir por el texto exacto del diseño. (Acceso ficticio: no existe esta integración.) -->
+    <string name="mi_acceso_seguridad">Acceso seguro con certificado digital, Cl@ve o tu credencial del REDMO. Tus datos no se guardan en este móvil.</string>
+    <string name="mi_anonimato_titulo">Anonimato total</string>
+    <!-- Revisar: el diseño citaba una ley que no parece la correcta. -->
+    <string name="mi_anonimato_texto">Protegido por la normativa española de donación.</string>
+    <string name="mi_historial_titulo">Historial médico</string>
+    <!-- TODO: sustituir por el texto exacto del diseño. -->
+    <string name="mi_historial_texto">Solo ves los hitos de tu donación, nunca datos clínicos del receptor.</string>
+
+    <string name="mi_donante_efectivo">Donante Efectivo REDMO</string>
+    <string name="mi_id_donante">ID: %1$s</string>
+    <string name="mi_principal_titulo">Tu gesto dio una vida</string>
+    <!-- TODO: sustituir por el texto exacto del diseño. -->
+    <string name="mi_principal_subtitulo">Gracias a tu donación, una persona ha recibido el trasplante que necesitaba.</string>
+    <string name="mi_estado_receptor">Estatus del receptor: %1$s</string>
+
+    <string name="mi_linea_titulo">Línea de tiempo solidaria</string>
+    <string name="mi_linea_subtitulo">Hitos certificados de tu donación</string>
+    <string name="mi_linea_etapas">%1$d/%2$d Etapas</string>
+    <string name="mi_paso_completado">Completado</string>
+    <string name="mi_paso_completado_detalle">Completado · %1$s</string>
+
+    <string name="mi_impacto_etiqueta">Informe de impacto</string>
+    <string name="mi_impacto_titulo">Sobre la persona que ha recibido tu donación</string>
+    <string name="mi_impacto_edad">Grupo de edad</string>
+    <string name="mi_impacto_ubicacion">Ubicación médica</string>
+    <string name="mi_impacto_diagnostico">Diagnóstico base</string>
+    <string name="mi_impacto_salud">Estado de salud</string>
+    <string name="mi_por_que_titulo">¿Por qué no veo más datos?</string>
+    <!-- TODO: sustituir por el texto exacto del diseño. -->
+    <string name="mi_por_que_texto">La ley protege el anonimato de donantes y receptores. Solo se comparten datos generales que no permiten identificar a nadie, y nunca antes de que pase el tiempo que marca el registro.</string>
+    <!-- TODO: sustituir por el texto exacto del diseño. -->
+    <string name="mi_agradecimiento">El equipo médico te transmite su agradecimiento: tu donación ha marcado la diferencia.</string>
+
+    <string name="mi_nota_registro">Esta información la proporciona el registro oficial. La app no la guarda.</string>
+
+    <!-- Cómo funciona -->
+    <string name="cf_guia">Guía del donante</string>
+    <string name="cf_titulo">Cómo funciona la donación</string>
+    <string name="cf_subtitulo">Un proceso sencillo, transparente y voluntario de principio a fin.</string>
+    <string name="cf_hero">Tu generosidad puede salvar una vida</string>
+    <string name="cf_camino_titulo">El camino de la donación</string>
+    <string name="cf_camino_pasos">6 pasos</string>
+    <string name="cf_paso_numero">Paso %1$d</string>
+
+    <string name="cf_paso1_titulo">Te informas</string>
+    <string name="cf_paso1_texto">Resuelves todas tus dudas con calma, conoces qué implica registrarse y decides libremente dar el paso.</string>
+    <string name="cf_paso1_etiqueta">Sin compromiso</string>
+    <string name="cf_paso2_titulo">Te inscribes y te toman una pequeña muestra</string>
+    <string name="cf_paso2_texto">En un centro autorizado firmas el consentimiento y te extraen un tubito de muestra (o frotis bucal) para el análisis de compatibilidad (HLA).</string>
+    <string name="cf_paso2_etiqueta">En centro autorizado</string>
+    <string name="cf_paso3_titulo">Quedas en el registro (y puede que nunca te llamen)</string>
+    <string name="cf_paso3_texto">Tus datos pasan al registro internacional REDMO. Puede pasar un año, diez o que nunca seas compatible con nadie, lo cual es completamente normal y habitual.</string>
+    <string name="cf_paso3_etiqueta">REDMO</string>
+    <string name="cf_paso4_titulo">Si eres compatible con un paciente, te contactan</string>
+    <string name="cf_paso4_texto">Si aparece una persona enferma en cualquier lugar del mundo compatible al 100% contigo, el equipo médico te llamará para confirmar si sigues disponible y hacerte una revisión de salud completa.</string>
+    <string name="cf_paso4_etiqueta">100% compatibilidad</string>
+    <string name="cf_paso5_titulo">Donas por sangre periférica o por médula ósea</string>
+    <string name="cf_paso5_texto">En el 85% de los casos se dona mediante aféresis (filtrado de células de la sangre a través del brazo, sin quirófano). En el 15% restante, mediante aspiración de la pelvis con anestesia breve.</string>
+    <string name="cf_paso5_etiqueta">Procedimiento seguro</string>
+    <string name="cf_paso5_chip_aferesis">85% aféresis</string>
+    <string name="cf_paso5_chip_aspiracion">15% aspiración</string>
+    <string name="cf_paso6_titulo">Recibes seguimiento</string>
+    <string name="cf_paso6_texto">Tu organismo regenera todas las células donadas en pocos días y el equipo médico sigue en contacto contigo para velar por tu recuperación.</string>
+    <string name="cf_paso6_etiqueta">Recuperación total</string>
+
+    <string name="cf_requisitos_titulo">Requisitos generales para inscribirse</string>
+    <string name="cf_requisitos_subtitulo">Criterios básicos previos a la visita médica</string>
+    <string name="cf_requisito_edad">Tener entre 18 y 40 años cumplidos.</string>
+    <string name="cf_requisito_salud">Gozar de buena salud general (sin enfermedades transmisibles por la sangre ni patologías crónicas graves).</string>
+    <string name="cf_requisito_residencia">Residir legalmente en España con documento oficial (DNI o NIE).</string>
+    <string name="cf_aviso_titulo">Es el centro quien confirma si puedes donar</string>
+    <string name="cf_aviso_texto">No hay ningún test ni cuestionario médico en la app; la evaluación clínica se realiza siempre por personal sanitario cualificado en el centro.</string>
+    <string name="cf_boton_centros">Buscar centros autorizados cercanos</string>
+
+    <!-- Accesibilidad -->
+    <string name="cd_volver">Volver</string>
+    <string name="cd_mapa">Mapa del centro</string>
+    <string name="cd_abrir_ruta">abrir la ruta para llegar</string>
+</resources>

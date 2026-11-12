@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PROVISIONAL: plano esquemático de calles. Sustituir por la imagen del diseño (mismo nombre). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="176dp"
+    android:viewportWidth="360"
+    android:viewportHeight="176">
+    <!-- Fondo -->
+    <path android:fillColor="#FFE4EDE9" android:pathData="M0,0h360v176h-360z" />
+    <!-- Parque -->
+    <path android:fillColor="#FFC7E3C9" android:pathData="M232,0h128v70c-30,10 -70,6 -100,-12c-18,-11 -26,-32 -28,-58z" />
+    <path android:fillColor="#FFC7E3C9" android:pathData="M0,120c40,-8 70,4 86,24l10,32h-96z" />
+    <!-- Manzanas -->
+    <path android:fillColor="#FFD8E2DF" android:pathData="M20,20h70v50h-70z M110,20h80v50h-80z M20,90h70v20h-70z M200,100h60v50h-60z M280,100h70v60h-70z M110,92h70v62h-70z" />
+    <!-- Calles principales -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFFFFFFF" android:strokeWidth="12" android:pathData="M0,80L360,80 M100,0L100,176 M190,176L270,0" />
+    <!-- Calles secundarias -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFFFFFFF" android:strokeWidth="5" android:pathData="M0,30L100,30 M195,90L360,90 M270,90L270,176 M0,150L100,150" />
+    <!-- Línea de metro -->
+    <path android:fillColor="#00000000" android:strokeColor="#998E5BA8" android:strokeWidth="3" android:pathData="M0,64C80,64 120,40 200,40S320,60 360,52" />
+</vector>

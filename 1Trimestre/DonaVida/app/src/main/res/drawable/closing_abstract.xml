@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PROVISIONAL: composición abstracta. Sustituir por la imagen del diseño (mismo nombre). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="144dp"
+    android:viewportWidth="360"
+    android:viewportHeight="144">
+    <path
+        android:fillColor="#FF1F7A8C"
+        android:pathData="M0,0h360v144h-360z" />
+    <path
+        android:fillColor="#9983D2E6"
+        android:pathData="M200,40a90,90 0,1 0,180 0a90,90 0,1 0,-180 0z" />
+    <path
+        android:fillColor="#B356766F"
+        android:pathData="M-40,130a80,80 0,1 0,160 0a80,80 0,1 0,-160 0z" />
+    <path
+        android:fillColor="#CCFF8162"
+        android:pathData="M150,90a34,34 0,1 0,68 0a34,34 0,1 0,-68 0z" />
+    <path
+        android:fillColor="#66E3F8FF"
+        android:pathData="M60,30a18,18 0,1 0,36 0a18,18 0,1 0,-36 0z" />
+</vector>

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "medula-espinal",
+    "esMito": true,
+    "enunciado": "Donar médula ósea es lo mismo que donar médula espinal.",
+    "respuesta": "No tienen nada que ver. La médula ósea es un tejido que está dentro de los huesos y fabrica las células de la sangre. La médula espinal forma parte del sistema nervioso y no se toca en ningún caso.",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "puncion-columna",
+    "esMito": true,
+    "enunciado": "Para donar siempre te pinchan en la columna.",
+    "respuesta": "La forma más habitual es la donación de sangre periférica: tras unos días de medicación, las células madre pasan a la sangre y se recogen con una máquina de aféresis, de forma parecida a una donación de plaquetas. Cuando se extrae médula ósea, se hace de los huesos de la cadera y con anestesia.",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "donare-seguro",
+    "esMito": true,
+    "enunciado": "Si me inscribo, voy a tener que donar seguro.",
+    "respuesta": "La probabilidad de que te llamen es baja, porque hace falta una compatibilidad muy alta entre donante y paciente. Aun así, cada nueva persona inscrita aumenta las opciones de que un paciente encuentre a su donante.",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "no-se-recupera",
+    "esMito": true,
+    "enunciado": "La médula que dono ya no se recupera.",
+    "respuesta": "El organismo repone las células donadas por sí solo en pocas semanas.",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "cordon-perjudica",
+    "esMito": true,
+    "enunciado": "Donar la sangre del cordón umbilical perjudica al bebé o a la madre.",
+    "respuesta": "La sangre se extrae del cordón y de la placenta después de cortar el cordón, así que no afecta al parto ni al bebé.",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "elegir-receptor",
+    "esMito": true,
+    "enunciado": "Puedo elegir a quién va mi donación y conocer a esa persona.",
+    "respuesta": "La donación es altruista y anónima: no se elige al receptor, no se conoce su identidad y nadie cobra por donar.",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "quien-puede",
+    "esMito": false,
+    "enunciado": "¿Quién puede hacerse donante?",
+    "respuesta": "En España pueden inscribirse las personas de 18 a 40 años con buen estado de salud, que permanecen en el registro hasta los 60 años. El equipo médico del centro valora cada caso.",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "como-inscribirse",
+    "esMito": false,
+    "enunciado": "¿Cómo me inscribo?",
+    "respuesta": "Pide información en un centro oficial de tu comunidad autónoma. Después de resolver tus dudas y firmar el consentimiento, te tomarán una muestra de sangre o de saliva para conocer tu tipaje HLA, y tus datos se incorporarán al Registro Español de Donantes de Médula Ósea (REDMO).",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "darse-de-baja",
+    "esMito": false,
+    "enunciado": "¿Puedo darme de baja?",
+    "respuesta": "Sí, en cualquier momento y sin dar explicaciones, contactando con tu centro. Lo ideal es avisar cuanto antes para no retrasar la búsqueda de un paciente.",
+    "urlFuente": "https://www.ont.es/"
+  },
+  {
+    "id": "riesgos",
+    "esMito": false,
+    "enunciado": "¿Tiene riesgos donar?",
+    "respuesta": "Son poco frecuentes y casi siempre leves y pasajeros: dolor de huesos parecido al de una gripe durante la medicación, o molestias en la cadera tras una extracción de médula ósea. Antes de donar te harán un reconocimiento médico completo.",
+    "urlFuente": "https://www.ont.es/"
+  }
+]

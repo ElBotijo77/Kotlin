@@ -1,0 +1,36 @@
+{
+  "esEjemplo": true,
+  "tipoDonacion": "sangre_periferica",
+  "etapas": [
+    {
+      "id": "inscripcion",
+      "titulo": "Inscripción",
+      "descripcion": "Te informaste, firmaste el consentimiento y se analizó tu muestra.",
+      "estado": "completada"
+    },
+    {
+      "id": "compatibilidad",
+      "titulo": "Estudio de compatibilidad",
+      "descripcion": "Tu tipaje HLA coincide con el de un paciente y se han confirmado los análisis.",
+      "estado": "completada"
+    },
+    {
+      "id": "reconocimiento",
+      "titulo": "Reconocimiento médico",
+      "descripcion": "El equipo médico comprueba que donar es seguro para ti.",
+      "estado": "en_curso"
+    },
+    {
+      "id": "donacion",
+      "titulo": "Donación",
+      "descripcion": "Día de la donación en el centro.",
+      "estado": "pendiente"
+    },
+    {
+      "id": "seguimiento",
+      "titulo": "Seguimiento",
+      "descripcion": "El centro se interesa por tu recuperación después de donar.",
+      "estado": "pendiente"
+    }
+  ]
+}

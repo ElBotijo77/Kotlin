@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PROVISIONAL: sustituir por la imagen de Stitch (mismo nombre). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="144dp"
+    android:viewportWidth="360"
+    android:viewportHeight="144">
+    <path android:fillColor="#FFFFDAD2" android:pathData="M0,0h360v144h-360z" />
+    <path android:fillColor="#FFFFB4A2" android:pathData="M260,10a70,70 0,1 0,140 0a70,70 0,1 0,-140 0z" />
+    <!-- Dos manos que se acercan (formas simples) -->
+    <path android:fillColor="#FFF2C6A8" android:pathData="M0,96c40,-10 80,-20 120,-14c16,2 28,10 30,20c2,10 -8,16 -20,14l-40,-6c20,10 40,14 60,12l-10,22c-50,6 -100,0 -140,-8z" />
+    <path android:fillColor="#FFD9A27E" android:pathData="M360,80c-40,-8 -80,-14 -120,-6c-16,3 -26,12 -26,22c0,10 10,15 22,12l40,-8c-20,12 -40,18 -60,18l12,20c50,2 98,-6 132,-16z" />
+    <path android:fillColor="#FFFF8162" android:pathData="M180,64l-5,-4.5C158,44 147,35 147,23c0,-10 8,-17 17,-17 5.5,0 11,2.5 16,7.5 5,-5 10.5,-7.5 16,-7.5 9,0 17,7 17,17 0,12 -11,21 -28,36.5z" />
+</vector>

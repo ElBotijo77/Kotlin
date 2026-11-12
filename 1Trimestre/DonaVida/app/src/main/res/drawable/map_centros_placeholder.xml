@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PROVISIONAL: plano esquemático de una zona amplia. Sustituir por la imagen del diseño (mismo nombre). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="320dp"
+    android:viewportWidth="360"
+    android:viewportHeight="320">
+    <path android:fillColor="#FFE4EDE9" android:pathData="M0,0h360v320h-360z" />
+    <!-- Parques -->
+    <path android:fillColor="#FFC7E3C9" android:pathData="M240,0h120v90c-40,12 -80,4 -104,-24c-12,-16 -16,-40 -16,-66z" />
+    <path android:fillColor="#FFC7E3C9" android:pathData="M0,210c50,-14 90,0 110,30l16,80h-126z" />
+    <path android:fillColor="#FFC7E3C9" android:pathData="M250,230c30,-10 70,-6 110,10v80h-120c-6,-30 -4,-66 10,-90z" />
+    <!-- Río -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFB5D8E6" android:strokeWidth="10" android:pathData="M0,170C60,150 110,190 170,176S290,130 360,150" />
+    <!-- Manzanas -->
+    <path android:fillColor="#FFD8E2DF" android:pathData="M20,20h70v50h-70z M110,20h80v50h-80z M20,90h70v50h-70z M200,100h40v40h-40z M140,200h60v40h-60z M210,200h30v60h-30z M20,260h0z M150,260h60v50h-60z M270,100h80v30h-80z" />
+    <!-- Calles principales -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFFFFFFF" android:strokeWidth="12" android:pathData="M0,80L360,80 M100,0L100,320 M130,320L270,0 M0,250L360,190" />
+    <!-- Calles secundarias -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFFFFFFF" android:strokeWidth="5" android:pathData="M0,30L100,30 M195,90L360,90 M250,140L250,320 M0,150L100,150 M100,200L240,200" />
+    <!-- Líneas de metro -->
+    <path android:fillColor="#00000000" android:strokeColor="#998E5BA8" android:strokeWidth="3" android:pathData="M0,64C80,64 120,40 200,40S320,60 360,52" />
+    <path android:fillColor="#00000000" android:strokeColor="#99E0912F" android:strokeWidth="3" android:pathData="M60,320C80,260 140,230 180,180S260,110 300,0" />
+</vector>

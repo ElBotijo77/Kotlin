@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PROVISIONAL: gota con corazón. Sustituir por el logo real del diseño (mismo nombre). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF006070"
+        android:pathData="M12,1.5C12,1.5 4,9.6 4,14.6c0,4.6 3.6,7.9 8,7.9s8,-3.3 8,-7.9C20,9.6 12,1.5 12,1.5z" />
+    <path
+        android:fillColor="#FFFF8162"
+        android:pathData="M12,19.2l-0.8,-0.73C8.6,16.1 6.9,14.6 6.9,12.7c0,-1.5 1.2,-2.7 2.7,-2.7 0.9,0 1.8,0.4 2.4,1.1 0.6,-0.7 1.5,-1.1 2.4,-1.1 1.5,0 2.7,1.2 2.7,2.7 0,1.9 -1.7,3.4 -4.3,5.8z" />
+</vector>
