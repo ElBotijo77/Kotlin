@@ -44,5 +44,7 @@ object FicherosDatos {
     const val MITOS = "data/mitos.json"
     const val GLOSARIO = "data/glosario.json"
     const val MI_DONACION = "data/mi_donacion.json"
+    const val PROBLEMAS = "data/problemas.json"
+    const val METODOS = "data/metodos.json"
     const val PERFIL = "data/perfil.json"
 }

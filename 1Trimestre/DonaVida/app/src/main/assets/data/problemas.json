@@ -1,0 +1,51 @@
+[
+  {
+    "id": "canceres-sangre",
+    "bloque": "actual",
+    "titulo": "Cánceres de la sangre",
+    "texto": "Leucemias, linfomas y mieloma múltiple. También se emplea en el neuroblastoma.",
+    "icono": "bloodtype"
+  },
+  {
+    "id": "enfermedades-sangre",
+    "bloque": "actual",
+    "titulo": "Enfermedades de la sangre no cancerosas",
+    "texto": "Anemia de células falciformes, inmunodeficiencias y algunas alteraciones congénitas del metabolismo.",
+    "icono": "healing"
+  },
+  {
+    "id": "recuperar-sistema-sanguineo",
+    "bloque": "actual",
+    "titulo": "Recuperar el sistema sanguíneo",
+    "texto": "Permite reconstruir la sangre y las defensas después de una quimioterapia o radioterapia intensas.",
+    "icono": "autorenew"
+  },
+  {
+    "id": "neurologicas",
+    "bloque": "investigacion",
+    "titulo": "Enfermedades neurológicas",
+    "texto": "El sistema nervioso se regenera muy poco, y se investiga cómo renovar neuronas en el Parkinson, el Alzheimer o la enfermedad de Huntington.",
+    "icono": "psychology"
+  },
+  {
+    "id": "diabetes",
+    "bloque": "investigacion",
+    "titulo": "Diabetes",
+    "texto": "Es una vía prometedora para tratar la diabetes mellitus.",
+    "icono": "monitor_heart"
+  },
+  {
+    "id": "corazon",
+    "bloque": "investigacion",
+    "titulo": "Corazón",
+    "texto": "Se estudia su uso tras un infarto de miocardio.",
+    "icono": "favorite"
+  },
+  {
+    "id": "regeneracion-tejidos",
+    "bloque": "investigacion",
+    "titulo": "Regeneración de tejidos",
+    "texto": "Podrían acelerar la curación de heridas y fracturas y ayudar a reconstruir tejidos y órganos dañados.",
+    "icono": "healing"
+  }
+]

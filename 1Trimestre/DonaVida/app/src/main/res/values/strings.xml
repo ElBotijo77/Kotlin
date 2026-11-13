@@ -5,19 +5,45 @@
     <string name="pestana_inicio">Inicio</string>
     <string name="pestana_centros">Centros</string>
     <string name="pestana_como_funciona">Cómo funciona</string>
-    <string name="pestana_mi_donacion">Mi donación</string>
+    <string name="pestana_saber_mas">Saber más</string>
 
     <!-- Títulos de pantalla -->
     <string name="titulo_ficha_centro">Ficha Centro</string>
     <string name="titulo_como_funciona">Cómo funciona</string>
     <string name="titulo_mi_donacion">Mi donación</string>
-    <string name="titulo_historias">Historias</string>
-    <string name="titulo_mitos">Mitos y preguntas frecuentes</string>
+    <string name="titulo_historias">Casos reales</string>
+    <string name="titulo_mitos">Mitos</string>
     <string name="titulo_privacidad">Privacidad</string>
 
     <!-- Barra superior -->
     <string name="cd_notificaciones">Notificaciones</string>
-    <string name="cd_perfil">Perfil</string>
+
+    <!-- Saber más -->
+    <string name="sm_insignia">Aprende</string>
+    <string name="sm_titulo">Saber más</string>
+    <string name="sm_subtitulo">Todo lo que necesitas saber sobre la donación de células madre.</string>
+    <string name="sm_problemas_titulo">Qué problemas pueden solucionar</string>
+    <string name="sm_problemas_texto">Enfermedades que se tratan y lo que se investiga</string>
+    <string name="sm_casos_titulo">Casos reales</string>
+    <string name="sm_casos_texto">Historias de pacientes y donantes</string>
+    <string name="sm_preguntas_titulo">Preguntas frecuentes</string>
+    <string name="sm_preguntas_texto">Las dudas más habituales antes de donar</string>
+    <string name="sm_mitos_titulo">Mitos</string>
+    <string name="sm_mitos_texto">Lo que se dice y lo que es verdad</string>
+
+    <!-- Saber más: problemas (los puntos están en assets/data/problemas.json) -->
+    <string name="pr_actual_titulo">Tratamientos actuales</string>
+    <string name="pr_actual_insignia">En uso</string>
+    <string name="pr_actual_intro">El trasplante de células madre hematopoyéticas ya se usa para tratar:</string>
+    <string name="pr_investigacion_titulo">En investigación</string>
+    <string name="pr_investigacion_insignia">En investigación</string>
+    <string name="pr_investigacion_intro">Estas aplicaciones se están estudiando, sobre todo en ensayos clínicos, con otros tipos de células madre. Todavía no son tratamientos habituales y no dependen de la donación de médula.</string>
+
+    <!-- Saber más: casos reales y mitos (los textos están en assets/data) -->
+    <string name="casos_ver_fuente">Ver fuente</string>
+    <string name="casos_nota">Casos publicados en medios de comunicación. La evolución de cada paciente puede haber cambiado desde entonces.</string>
+    <string name="mitos_mito">MITO</string>
+    <string name="mitos_realidad">REALIDAD</string>
 
     <!-- Marcadores provisionales -->
     <string name="marcador_en_construccion">Pantalla en construcción.</string>
@@ -39,6 +65,16 @@
     <string name="inicio_chip_muestra">Una sola muestra</string>
     <string name="inicio_chip_registro">Registro REDMO</string>
     <string name="inicio_cta_boton">Buscar un centro cerca</string>
+
+    <!-- Inicio: antes de empezar (docs/contenido.md, sección 1) -->
+    <string name="inicio_intro_etiqueta">Antes de empezar</string>
+    <string name="inicio_intro_que_son_titulo">¿Qué son las células madre?</string>
+    <string name="inicio_intro_que_son_texto">Las células madre son células indiferenciadas e inmaduras, es decir, todavía no están especializadas en ninguna función. Pueden dividirse de forma indefinida y transformarse en células especializadas, como neuronas, glóbulos rojos o células del hígado.</string>
+    <string name="inicio_intro_que_son_texto2">En la donación de médula se donan células madre hematopoyéticas, que son las que forman la sangre.</string>
+    <string name="inicio_intro_leer_mas">Leer más</string>
+    <string name="inicio_intro_leer_menos">Leer menos</string>
+    <string name="inicio_intro_por_que_titulo">¿Por qué es importante donarlas?</string>
+    <string name="inicio_intro_por_que_texto">Donar células madre permite regenerar el sistema sanguíneo e inmunitario de personas con enfermedades graves, recuperar las células destruidas durante los tratamientos contra el cáncer y contribuir a que la investigación médica descubra nuevos tratamientos.</string>
 
     <!-- Inicio: dato -->
     <string name="inicio_dato_cifra">1 entre 4.000</string>
@@ -62,13 +98,6 @@
     <!-- TODO: sustituir por el texto exacto del HTML de Stitch. -->
     <string name="inicio_tranquilidad_texto">En el %1$s la donación se hace desde la sangre, de forma parecida a donar plaquetas: sin quirófano ni anestesia.</string>
     <string name="inicio_tranquilidad_destacado">85% de los casos</string>
-
-    <!-- Inicio: ya soy donante -->
-    <string name="inicio_comunidad_etiqueta">Comunidad Donante</string>
-    <string name="inicio_comunidad_titulo">¿Ya eres donante o has donado?</string>
-    <!-- TODO: sustituir por el texto exacto del HTML de Stitch. -->
-    <string name="inicio_comunidad_texto">Sigue aquí las etapas de tu proceso. La Fundación Josep Carreras, que gestiona REDMO, te acompaña en cada paso.</string>
-    <string name="inicio_comunidad_boton">Acceder a Mi donación</string>
 
     <!-- Inicio: cierre -->
     <string name="inicio_cierre">Coordinado en España por REDMO y el Sistema Nacional de Salud.</string>
@@ -224,30 +253,10 @@
     <string name="cf_titulo">Cómo funciona la donación</string>
     <string name="cf_subtitulo">Un proceso sencillo, transparente y voluntario de principio a fin.</string>
     <string name="cf_hero">Tu generosidad puede salvar una vida</string>
-    <string name="cf_camino_titulo">El camino de la donación</string>
-    <string name="cf_camino_pasos">6 pasos</string>
-    <string name="cf_paso_numero">Paso %1$d</string>
-
-    <string name="cf_paso1_titulo">Te informas</string>
-    <string name="cf_paso1_texto">Resuelves todas tus dudas con calma, conoces qué implica registrarse y decides libremente dar el paso.</string>
-    <string name="cf_paso1_etiqueta">Sin compromiso</string>
-    <string name="cf_paso2_titulo">Te inscribes y te toman una pequeña muestra</string>
-    <string name="cf_paso2_texto">En un centro autorizado firmas el consentimiento y te extraen un tubito de muestra (o frotis bucal) para el análisis de compatibilidad (HLA).</string>
-    <string name="cf_paso2_etiqueta">En centro autorizado</string>
-    <string name="cf_paso3_titulo">Quedas en el registro (y puede que nunca te llamen)</string>
-    <string name="cf_paso3_texto">Tus datos pasan al registro internacional REDMO. Puede pasar un año, diez o que nunca seas compatible con nadie, lo cual es completamente normal y habitual.</string>
-    <string name="cf_paso3_etiqueta">REDMO</string>
-    <string name="cf_paso4_titulo">Si eres compatible con un paciente, te contactan</string>
-    <string name="cf_paso4_texto">Si aparece una persona enferma en cualquier lugar del mundo compatible al 100% contigo, el equipo médico te llamará para confirmar si sigues disponible y hacerte una revisión de salud completa.</string>
-    <string name="cf_paso4_etiqueta">100% compatibilidad</string>
-    <string name="cf_paso5_titulo">Donas por sangre periférica o por médula ósea</string>
-    <string name="cf_paso5_texto">En el 85% de los casos se dona mediante aféresis (filtrado de células de la sangre a través del brazo, sin quirófano). En el 15% restante, mediante aspiración de la pelvis con anestesia breve.</string>
-    <string name="cf_paso5_etiqueta">Procedimiento seguro</string>
-    <string name="cf_paso5_chip_aferesis">85% aféresis</string>
-    <string name="cf_paso5_chip_aspiracion">15% aspiración</string>
-    <string name="cf_paso6_titulo">Recibes seguimiento</string>
-    <string name="cf_paso6_texto">Tu organismo regenera todas las células donadas en pocos días y el equipo médico sigue en contacto contigo para velar por tu recuperación.</string>
-    <string name="cf_paso6_etiqueta">Recuperación total</string>
+    <!-- Los textos de cada método están en assets/data/metodos.json -->
+    <string name="cf_metodos_titulo">Métodos de donación</string>
+    <string name="cf_metodos_numero">3 métodos</string>
+    <string name="cf_metodo_mas_habitual">La más habitual</string>
 
     <string name="cf_requisitos_titulo">Requisitos generales para inscribirse</string>
     <string name="cf_requisitos_subtitulo">Criterios básicos previos a la visita médica</string>

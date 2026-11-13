@@ -1,0 +1,48 @@
+[
+  {
+    "tipo": "medula_osea",
+    "titulo": "Médula ósea (hueso de la cadera)",
+    "apartados": [
+      {
+        "etiqueta": "Procedimiento",
+        "texto": "Se realiza en quirófano con anestesia general. Con una aguja se extrae médula líquida del hueso de la cadera (pelvis). Dura entre 1 y 2 horas y se extrae menos del 10 % de la médula, alrededor de 1 litro de mezcla de médula y sangre."
+      },
+      {
+        "etiqueta": "Recuperación",
+        "texto": "Normalmente el alta es el mismo día o a la mañana siguiente."
+      }
+    ]
+  },
+  {
+    "tipo": "sangre_periferica",
+    "titulo": "Sangre periférica (aféresis)",
+    "apartados": [
+      {
+        "etiqueta": "Preparación",
+        "texto": "Durante los días previos se administra un medicamento, el filgrastim, que estimula la salida de las células madre a la sangre."
+      },
+      {
+        "etiqueta": "Procedimiento",
+        "texto": "La sangre sale por una vía en una vena, pasa por una máquina que separa las células madre y vuelve al cuerpo con el resto de sus componentes. Cada sesión dura entre 2 y 4 horas; mientras tanto puedes descansar, leer o ver una película."
+      },
+      {
+        "etiqueta": "Dato",
+        "texto": "Es el método que se usa en la mayoría de las donaciones."
+      }
+    ]
+  },
+  {
+    "tipo": "cordon_umbilical",
+    "titulo": "Sangre del cordón umbilical",
+    "apartados": [
+      {
+        "etiqueta": "Coordinación",
+        "texto": "Se organiza durante el embarazo, idealmente antes del tercer trimestre (semana 28), con un hospital de maternidad autorizado."
+      },
+      {
+        "etiqueta": "Procedimiento",
+        "texto": "Tras el nacimiento y el corte del cordón, la sangre que queda en el cordón y la placenta se recoge en un recipiente estéril y se congela. No supone ningún riesgo para la madre ni para el bebé."
+      }
+    ]
+  }
+]

@@ -4,9 +4,11 @@ import com.example.donavida.data.local.FicherosDatos
 import com.example.donavida.data.local.LectorJson
 import com.example.donavida.data.model.Centro
 import com.example.donavida.data.model.Historia
+import com.example.donavida.data.model.MetodoDonacion
 import com.example.donavida.data.model.MiDonacion
 import com.example.donavida.data.model.Mito
 import com.example.donavida.data.model.Perfil
+import com.example.donavida.data.model.Problema
 import com.example.donavida.data.model.TerminoGlosario
 
 // Implementaciones que leen los JSON de ejemplo. Cuando haya API, se crearán otras clases
@@ -31,6 +33,14 @@ class RepositorioHistoriasLocal(private val lector: LectorJson) : RepositorioHis
 
 class RepositorioMitosLocal(private val lector: LectorJson) : RepositorioMitos {
     override suspend fun obtenerMitos(): List<Mito> = lector.leer(FicherosDatos.MITOS)
+}
+
+class RepositorioProblemasLocal(private val lector: LectorJson) : RepositorioProblemas {
+    override suspend fun obtenerProblemas(): List<Problema> = lector.leer(FicherosDatos.PROBLEMAS)
+}
+
+class RepositorioMetodosLocal(private val lector: LectorJson) : RepositorioMetodos {
+    override suspend fun obtenerMetodos(): List<MetodoDonacion> = lector.leer(FicherosDatos.METODOS)
 }
 
 class RepositorioGlosarioLocal(private val lector: LectorJson) : RepositorioGlosario {

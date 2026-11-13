@@ -8,12 +8,16 @@ import com.example.donavida.data.repository.RepositorioGlosario
 import com.example.donavida.data.repository.RepositorioGlosarioLocal
 import com.example.donavida.data.repository.RepositorioHistorias
 import com.example.donavida.data.repository.RepositorioHistoriasLocal
+import com.example.donavida.data.repository.RepositorioMetodos
+import com.example.donavida.data.repository.RepositorioMetodosLocal
 import com.example.donavida.data.repository.RepositorioMiDonacion
 import com.example.donavida.data.repository.RepositorioMiDonacionLocal
 import com.example.donavida.data.repository.RepositorioMitos
 import com.example.donavida.data.repository.RepositorioMitosLocal
 import com.example.donavida.data.repository.RepositorioPerfil
 import com.example.donavida.data.repository.RepositorioPerfilLocal
+import com.example.donavida.data.repository.RepositorioProblemas
+import com.example.donavida.data.repository.RepositorioProblemasLocal
 import com.example.donavida.data.repository.RepositorioUbicacion
 import com.example.donavida.data.repository.RepositorioUbicacionFused
 
@@ -28,6 +32,8 @@ class ContenedorDependencias(private val context: Context) {
     val repositorioCentros: RepositorioCentros by lazy { RepositorioCentrosLocal(lector) }
     val repositorioHistorias: RepositorioHistorias by lazy { RepositorioHistoriasLocal(lector) }
     val repositorioMitos: RepositorioMitos by lazy { RepositorioMitosLocal(lector) }
+    val repositorioProblemas: RepositorioProblemas by lazy { RepositorioProblemasLocal(lector) }
+    val repositorioMetodos: RepositorioMetodos by lazy { RepositorioMetodosLocal(lector) }
     val repositorioGlosario: RepositorioGlosario by lazy { RepositorioGlosarioLocal(lector) }
     val repositorioMiDonacion: RepositorioMiDonacion by lazy { RepositorioMiDonacionLocal(lector) }
     val repositorioPerfil: RepositorioPerfil by lazy { RepositorioPerfilLocal(lector) }

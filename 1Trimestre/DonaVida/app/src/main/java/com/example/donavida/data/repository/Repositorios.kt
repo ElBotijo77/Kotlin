@@ -2,9 +2,11 @@ package com.example.donavida.data.repository
 
 import com.example.donavida.data.model.Centro
 import com.example.donavida.data.model.Historia
+import com.example.donavida.data.model.MetodoDonacion
 import com.example.donavida.data.model.MiDonacion
 import com.example.donavida.data.model.Mito
 import com.example.donavida.data.model.Perfil
+import com.example.donavida.data.model.Problema
 import com.example.donavida.data.model.TerminoGlosario
 
 // Contratos de acceso a datos. Los ViewModel solo conocerán estas interfaces, nunca de dónde
@@ -24,6 +26,14 @@ interface RepositorioHistorias {
 
 interface RepositorioMitos {
     suspend fun obtenerMitos(): List<Mito>
+}
+
+interface RepositorioProblemas {
+    suspend fun obtenerProblemas(): List<Problema>
+}
+
+interface RepositorioMetodos {
+    suspend fun obtenerMetodos(): List<MetodoDonacion>
 }
 
 interface RepositorioGlosario {

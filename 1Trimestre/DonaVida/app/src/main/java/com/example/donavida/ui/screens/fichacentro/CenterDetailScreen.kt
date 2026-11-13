@@ -100,7 +100,6 @@ private val SeparacionTarjetas = 14.dp
 @Composable
 fun CenterDetailRoute(
     onBack: () -> Unit,
-    onProfileClick: () -> Unit,
     viewModel: CenterDetailViewModel = viewModel(factory = CenterDetailViewModel.Factory),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -108,7 +107,6 @@ fun CenterDetailRoute(
     CenterDetailScreen(
         uiState = uiState,
         onBack = onBack,
-        onProfileClick = onProfileClick,
         onCall = { telefono -> abrirMarcador(context, telefono) },
         onDirections = { centro -> abrirRuta(context, centro) },
         onOpenWeb = { url -> abrirWeb(context, url) },
@@ -120,7 +118,6 @@ fun CenterDetailRoute(
 fun CenterDetailScreen(
     uiState: CenterDetailUiState,
     onBack: () -> Unit,
-    onProfileClick: () -> Unit,
     onCall: (String) -> Unit,
     onDirections: (Centro) -> Unit,
     onOpenWeb: (String) -> Unit,
@@ -133,7 +130,6 @@ fun CenterDetailScreen(
             SecondaryTopBar(
                 title = stringResource(R.string.titulo_ficha_centro),
                 onBack = onBack,
-                onProfileClick = onProfileClick,
             )
         },
     ) { margenInterior ->
@@ -808,7 +804,6 @@ private fun FichaPreview(estado: CenterDetailUiState) {
         CenterDetailScreen(
             uiState = estado,
             onBack = {},
-            onProfileClick = {},
             onCall = {},
             onDirections = {},
             onOpenWeb = {},

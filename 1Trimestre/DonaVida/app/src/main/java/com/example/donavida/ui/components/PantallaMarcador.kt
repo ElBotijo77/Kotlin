@@ -26,12 +26,12 @@ fun PantallaMarcador(
     titulo: String,
     modifier: Modifier = Modifier,
     onVolver: (() -> Unit)? = null,
-    onPerfil: () -> Unit = {},
+
     contenido: @Composable ColumnScope.() -> Unit = {},
 ) {
     Column(modifier = modifier.fillMaxSize()) {
         if (onVolver != null) {
-            SecondaryTopBar(title = titulo, onBack = onVolver, onProfileClick = onPerfil)
+            SecondaryTopBar(title = titulo, onBack = onVolver)
         }
         Column(
             modifier = Modifier

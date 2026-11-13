@@ -16,12 +16,15 @@ sealed class Screen(val route: String) {
     data object Inicio : Screen("inicio")
     data object Centros : Screen("centros")
     data object ComoFunciona : Screen("como_funciona")
-    data object MiDonacion : Screen("mi_donacion")
+    data object SaberMas : Screen("saber_mas")
 
     // --- Pantallas secundarias ---
-    data object Historias : Screen("historias")
-    data object Mitos : Screen("mitos")
-    data object Privacidad : Screen("privacidad")
+    // Todas cuelgan de "saber_mas/" para que la pestaña Saber más siga marcada al abrirlas.
+    data object Problemas : Screen("saber_mas/problemas")
+    data object Casos : Screen("saber_mas/casos")
+    data object Preguntas : Screen("saber_mas/preguntas")
+    data object Mitos : Screen("saber_mas/mitos")
+    data object Privacidad : Screen("saber_mas/privacidad")
 
     /**
      * La ficha recibe el id del centro como argumento: "centros/hospital-la-paz".
@@ -42,7 +45,7 @@ enum class Pestana(
     INICIO(Screen.Inicio, R.string.pestana_inicio, R.drawable.ic_home),
     CENTROS(Screen.Centros, R.string.pestana_centros, R.drawable.ic_local_hospital),
     COMO_FUNCIONA(Screen.ComoFunciona, R.string.pestana_como_funciona, R.drawable.ic_auto_awesome),
-    MI_DONACION(Screen.MiDonacion, R.string.pestana_mi_donacion, R.drawable.ic_volunteer_activism);
+    SABER_MAS(Screen.SaberMas, R.string.pestana_saber_mas, R.drawable.ic_menu_book);
 
     /** true si [ruta] es esta pestaña o una pantalla que cuelga de ella ("centros/xyz"). */
     fun contiene(ruta: String?): Boolean =

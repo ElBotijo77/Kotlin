@@ -7,6 +7,6 @@ import com.example.donavida.R
 import com.example.donavida.ui.components.PantallaMarcador
 
 @Composable
-fun PantallaPrivacidad(onVolver: () -> Unit, onPerfil: () -> Unit, modifier: Modifier = Modifier) {
-    PantallaMarcador(titulo = stringResource(R.string.titulo_privacidad), onVolver = onVolver, onPerfil = onPerfil, modifier = modifier)
+fun PantallaPrivacidad(onVolver: () -> Unit, modifier: Modifier = Modifier) {
+    PantallaMarcador(titulo = stringResource(R.string.titulo_privacidad), onVolver = onVolver, modifier = modifier)
 }

@@ -1,38 +1,15 @@
 [
   {
-    "id": "llamada-inesperada",
-    "titulo": "La llamada que no esperaba",
-    "perfil": "Donante de sangre periférica",
-    "tipoDonacion": "sangre_periferica",
-    "resumen": "Se inscribió casi sin pensarlo y, años después, resultó ser compatible con un paciente.",
-    "texto": "Me inscribí después de una charla informativa y, sinceramente, me olvidé del tema. Cuando me llamaron para decirme que podía ser compatible con un paciente, me temblaban las manos. Me hicieron un reconocimiento médico completo y me explicaron todo con calma. Durante unos días me pusieron una medicación para que las células madre pasaran a la sangre: noté algo de dolor de huesos, como en una gripe. La donación fue parecida a donar plaquetas, sentada unas horas conectada a una máquina. Al día siguiente hacía vida normal.",
-    "esIlustrativa": true
+    "id": "timothy-ray-brown",
+    "titulo": "Timothy Ray Brown, \"el paciente de Berlín\"",
+    "subtitulo": "Berlín, 2007",
+    "texto": "Recibió un trasplante de células madre hematopoyéticas para tratar una leucemia mieloide aguda. Su donante tenía una mutación genética poco frecuente (CCR5-Δ32) que impide que el VIH entre en los glóbulos blancos, y se convirtió en la primera persona del mundo curada del VIH. Falleció en 2020 por una recaída de la leucemia, sin rastro del virus."
   },
   {
-    "id": "quirofano-y-cafe",
-    "titulo": "Un día en el hospital y un café después",
-    "perfil": "Donante de médula ósea",
-    "tipoDonacion": "medula_osea",
-    "resumen": "Le pidieron donar médula ósea directamente del hueso de la cadera y cuenta cómo fue.",
-    "texto": "Tenía miedo porque pensaba que me pincharían en la columna, y no es así: la médula ósea se extrae de los huesos de la cadera, con anestesia. Ingresé por la mañana y al día siguiente me fui a casa. Estuve unos días con molestias en la parte baja de la espalda, nada que no se calmara con un analgésico. Mi cuerpo repuso lo que doné en pocas semanas. Del receptor solo sé que la donación llegó a tiempo, y con eso me basta.",
-    "esIlustrativa": true
-  },
-  {
-    "id": "regalo-del-parto",
-    "titulo": "Lo que se habría tirado",
-    "perfil": "Madre que donó sangre de cordón umbilical",
-    "tipoDonacion": "cordon_umbilical",
-    "resumen": "Decidió donar la sangre del cordón de su bebé durante el embarazo.",
-    "texto": "En una de las consultas del embarazo me contaron que mi maternidad podía recoger la sangre del cordón umbilical. Me explicaron que se extrae cuando el cordón ya está cortado, así que no cambia nada del parto ni para mí ni para mi bebé. Firmé el consentimiento y no tuve que hacer nada más. Me gusta pensar que algo que se habría desechado puede servir a otra persona.",
-    "esIlustrativa": true
-  },
-  {
-    "id": "al-otro-lado",
-    "titulo": "Desde el otro lado",
-    "perfil": "Persona que recibió un trasplante",
-    "tipoDonacion": "sangre_periferica",
-    "resumen": "Una persona trasplantada cuenta lo que significó que apareciera un donante compatible.",
-    "texto": "Cuando me dijeron que necesitaba un trasplante y que en mi familia no había nadie compatible, todo dependía de que alguien desconocido se hubiera inscrito alguna vez. Apareció. No sé quién es ni lo sabré, y está bien así. Solo puedo pedir a quien lea esto que se informe: inscribirse cuesta muy poco y, para alguien, lo cambia todo.",
-    "esIlustrativa": true
+    "id": "diego",
+    "titulo": "Diego",
+    "subtitulo": "Alcuéscar (Cáceres), octubre de 2026",
+    "texto": "Con 5 años y enfermo de leucemia, recibió en el Hospital La Paz de Madrid un trasplante haploidéntico (compatible al 50 %) donado por su madre, después de una campaña de movilización en la que no apareció un donante compatible al 100 % en los registros.",
+    "fuenteUrl": "https://www.telecinco.es/noticias/salud/20261008/diego-nino-leucemia-recibe-trasplante-medula-osea-donada-madre_18_020390741.html"
   }
 ]
