@@ -1,13 +1,17 @@
 package com.example.donavida.data
 
 import com.example.donavida.data.local.LectorJson
+import com.example.donavida.data.model.BloqueProblema
 import com.example.donavida.data.model.EstadoEtapa
+import com.example.donavida.data.model.TipoDonacion
 import com.example.donavida.data.repository.RepositorioCentrosLocal
 import com.example.donavida.data.repository.RepositorioGlosarioLocal
 import com.example.donavida.data.repository.RepositorioHistoriasLocal
+import com.example.donavida.data.repository.RepositorioMetodosLocal
 import com.example.donavida.data.repository.RepositorioMiDonacionLocal
 import com.example.donavida.data.repository.RepositorioMitosLocal
 import com.example.donavida.data.repository.RepositorioPerfilLocal
+import com.example.donavida.data.repository.RepositorioProblemasLocal
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -48,17 +52,30 @@ class RepositoriosLocalesTest {
     }
 
     @Test
-    fun historias_mitosYGlosario_seLeenConIdsUnicos() = runBlocking {
+    fun contenidos_seLeenConIdsUnicos() = runBlocking {
         val historias = RepositorioHistoriasLocal(lector).obtenerHistorias()
         val mitos = RepositorioMitosLocal(lector).obtenerMitos()
+        val problemas = RepositorioProblemasLocal(lector).obtenerProblemas()
         val glosario = RepositorioGlosarioLocal(lector).obtenerTerminos()
 
-        listOf(historias.map { it.id }, mitos.map { it.id }, glosario.map { it.id }).forEach { ids ->
+        listOf(historias.map { it.id }, mitos.map { it.id }, problemas.map { it.id }, glosario.map { it.id }).forEach { ids ->
             assertTrue(ids.isNotEmpty())
             assertEquals(ids.size, ids.toSet().size)
         }
         assertTrue("Debe haber mitos", mitos.any { it.esMito })
         assertTrue("Debe haber preguntas frecuentes", mitos.any { !it.esMito })
+        // Si no, la negrita no se pintaría (textoConDestacado busca el destacado dentro del texto).
+        mitos.flatMap { it.puntos }.forEach { assertTrue(it.texto, it.destacado in it.texto) }
+        // Casos reales: si tienen fuente, tiene que ser un enlace https.
+        historias.forEach { h ->
+            assertTrue("${h.id}: fuenteUrl debe ser https", h.fuenteUrl?.startsWith("https://") ?: true)
+        }
+        assertTrue("Faltan tratamientos actuales", problemas.any { it.bloque == BloqueProblema.ACTUAL })
+        assertTrue("Faltan líneas de investigación", problemas.any { it.bloque == BloqueProblema.INVESTIGACION })
+        // Cómo funciona: un método por tipo de donación, cada uno con algún apartado.
+        val metodos = RepositorioMetodosLocal(lector).obtenerMetodos()
+        assertEquals(TipoDonacion.entries.toSet(), metodos.map { it.tipo }.toSet())
+        metodos.forEach { assertTrue(it.titulo, it.apartados.isNotEmpty()) }
     }
 
     @Test

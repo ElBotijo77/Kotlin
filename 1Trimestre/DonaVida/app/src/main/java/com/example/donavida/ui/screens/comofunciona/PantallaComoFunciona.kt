@@ -2,10 +2,8 @@ package com.example.donavida.ui.screens.comofunciona
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -25,18 +23,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -44,23 +35,37 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.donavida.R
+import com.example.donavida.data.model.MetodoDonacion
+import com.example.donavida.data.model.TipoDonacion
 import com.example.donavida.ui.components.IconCircle
 import com.example.donavida.ui.components.InfoChip
 import com.example.donavida.ui.components.PrimaryPillButton
 import com.example.donavida.ui.components.SectionCard
 import com.example.donavida.ui.components.StatusBadge
+import com.example.donavida.ui.screens.sabermas.ListaViewModel
 import com.example.donavida.ui.theme.AppShapes
 import com.example.donavida.ui.theme.AppTypography
 import com.example.donavida.ui.theme.DonaVidaTheme
 import com.example.donavida.ui.theme.Spacing
 import java.util.Locale
 
-/** Padding de la tarjeta (16) + mitad del círculo (24): ahí va la línea que une los pasos. */
-private val CentroCirculo = 40.dp
-
+/** Versión "con estado": carga los métodos de donación y se los pasa a [ContenidoComoFunciona]. */
 @Composable
 fun PantallaComoFunciona(
+    onBuscarCentros: () -> Unit,
+    modifier: Modifier = Modifier,
+    viewModel: ListaViewModel<MetodoDonacion> = viewModel(factory = ListaViewModel.fabrica { repositorioMetodos.obtenerMetodos() }),
+) {
+    val metodos by viewModel.elementos.collectAsStateWithLifecycle()
+    ContenidoComoFunciona(metodos = metodos.orEmpty(), onBuscarCentros = onBuscarCentros, modifier = modifier)
+}
+
+@Composable
+fun ContenidoComoFunciona(
+    metodos: List<MetodoDonacion>,
     onBuscarCentros: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -71,7 +76,7 @@ fun PantallaComoFunciona(
     ) {
         item { Cabecera() }
         item { ImagenPrincipal() }
-        item { CaminoDonacion() }
+        item { MetodosDonacion(metodos) }
         item { ImagenManos() }
         item { Requisitos() }
         item {
@@ -162,51 +167,34 @@ private fun ImagenPrincipal() {
 }
 
 // ---------------------------------------------------------------------------------------
-// 3. El camino de la donación
+// 3. Métodos de donación (textos en assets/data/metodos.json)
 // ---------------------------------------------------------------------------------------
 
-private data class PasoCamino(
-    val numero: Int,
+/** Lo que no viene en el JSON: icono, colores del círculo y si lleva el chip "La más habitual". */
+private data class EstiloMetodo(
     @param:DrawableRes val icono: Int,
-    val fondoCirculo: Color,
-    val tinteCirculo: Color,
-    val colorNumero: Color,
-    @param:StringRes val etiqueta: Int,
-    val colorEtiqueta: Color,
-    @param:StringRes val titulo: Int,
-    @param:StringRes val texto: Int,
-    val conChipsDonacion: Boolean = false,
+    val fondo: Color,
+    val tinte: Color,
+    val masHabitual: Boolean = false,
 )
 
 @Composable
-private fun pasosDelCamino(): List<PasoCamino> {
-    val c = MaterialTheme.colorScheme
+private fun estiloMetodo(tipo: TipoDonacion): EstiloMetodo {
     val e = DonaVidaTheme.extendedColors
-    return listOf(
-        PasoCamino(1, R.drawable.ic_lightbulb, c.surfaceContainerHigh, c.primary, c.primary,
-            R.string.cf_paso1_etiqueta, c.onSurfaceVariant, R.string.cf_paso1_titulo, R.string.cf_paso1_texto),
-        PasoCamino(2, R.drawable.ic_assignment_turned_in, e.primaryFixed, e.onPrimaryFixed, c.primary,
-            R.string.cf_paso2_etiqueta, c.onSurfaceVariant, R.string.cf_paso2_titulo, R.string.cf_paso2_texto),
-        PasoCamino(3, R.drawable.ic_hourglass_empty, c.surfaceContainer, c.primary, c.primary,
-            R.string.cf_paso3_etiqueta, c.onSurfaceVariant, R.string.cf_paso3_titulo, R.string.cf_paso3_texto),
-        PasoCamino(4, R.drawable.ic_ring_volume, e.secondaryFixed, e.onSecondaryFixed, c.secondary,
-            R.string.cf_paso4_etiqueta, c.secondary, R.string.cf_paso4_titulo, R.string.cf_paso4_texto),
-        PasoCamino(5, R.drawable.ic_diversity_1, e.tertiaryFixed, e.onTertiaryFixed, c.tertiary,
-            R.string.cf_paso5_etiqueta, c.onSurfaceVariant, R.string.cf_paso5_titulo, R.string.cf_paso5_texto,
-            conChipsDonacion = true),
-        PasoCamino(6, R.drawable.ic_spa, e.primaryFixedDim, e.onPrimaryFixed, c.primary,
-            R.string.cf_paso6_etiqueta, c.tertiary, R.string.cf_paso6_titulo, R.string.cf_paso6_texto),
-    )
+    return when (tipo) {
+        TipoDonacion.MEDULA_OSEA -> EstiloMetodo(R.drawable.ic_medical_services, e.primaryFixed, e.onPrimaryFixed)
+        TipoDonacion.SANGRE_PERIFERICA -> EstiloMetodo(R.drawable.ic_bloodtype, e.secondaryFixed, e.onSecondaryFixed, masHabitual = true)
+        TipoDonacion.CORDON_UMBILICAL -> EstiloMetodo(R.drawable.ic_child_care, e.tertiaryFixed, e.onTertiaryFixed)
+    }
 }
 
 @Composable
-private fun CaminoDonacion() {
+private fun MetodosDonacion(metodos: List<MetodoDonacion>) {
     val colores = MaterialTheme.colorScheme
-    val colorLinea = colores.outlineVariant.copy(alpha = 0.5f)
     Column {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
-                text = stringResource(R.string.cf_camino_titulo),
+                text = stringResource(R.string.cf_metodos_titulo),
                 style = MaterialTheme.typography.headlineSmall,
                 color = colores.onSurface,
                 modifier = Modifier
@@ -214,83 +202,44 @@ private fun CaminoDonacion() {
                     .semantics { heading() },
             )
             StatusBadge(
-                text = stringResource(R.string.cf_camino_pasos),
+                text = stringResource(R.string.cf_metodos_numero),
                 containerColor = colores.surfaceContainer,
                 contentColor = colores.primary,
             )
         }
         Spacer(Modifier.height(Spacing.md))
-        // La línea se dibuja detrás de las tarjetas: solo asoma en los huecos entre ellas.
-        Column(
-            modifier = Modifier.drawBehind {
-                val x = CentroCirculo.toPx()
-                drawLine(colorLinea, Offset(x, 0f), Offset(x, size.height), strokeWidth = 2.dp.toPx())
-            },
-            verticalArrangement = Arrangement.spacedBy(Spacing.md),
-        ) {
-            pasosDelCamino().forEach { TarjetaPaso(it) }
+        Column(verticalArrangement = Arrangement.spacedBy(Spacing.md)) {
+            metodos.forEach { TarjetaMetodo(it) }
         }
     }
 }
 
 @Composable
-private fun TarjetaPaso(paso: PasoCamino) {
-    // Se encoge un poco al tocarla (sin acción: es solo respuesta visual).
-    var pulsada by remember { mutableStateOf(false) }
-    val escala by animateFloatAsState(if (pulsada) 0.99f else 1f, label = "escalaPaso")
-    SectionCard(
-        modifier = Modifier
-            .graphicsLayer {
-                scaleX = escala
-                scaleY = escala
-            }
-            .pointerInput(Unit) {
-                detectTapGestures(onPress = {
-                    pulsada = true
-                    tryAwaitRelease()
-                    pulsada = false
-                })
-            },
-        shape = AppShapes.cardSmall,
-        contentPadding = Spacing.md,
-    ) {
-        Row(verticalAlignment = Alignment.Top) {
-            IconCircle(
-                icon = paso.icono,
-                size = 48.dp,
-                background = paso.fondoCirculo,
-                tint = paso.tinteCirculo,
-                iconSize = 24.dp,
-            )
+private fun TarjetaMetodo(metodo: MetodoDonacion) {
+    val colores = MaterialTheme.colorScheme
+    val estilo = estiloMetodo(metodo.tipo)
+    val espanol = Locale.forLanguageTag("es-ES")
+    SectionCard(shape = AppShapes.cardSmall, contentPadding = Spacing.md) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            IconCircle(icon = estilo.icono, size = 48.dp, background = estilo.fondo, tint = estilo.tinte, iconSize = 24.dp)
             Spacer(Modifier.width(Spacing.md))
-            Column(modifier = Modifier.weight(1f)) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(
-                        text = stringResource(R.string.cf_paso_numero, paso.numero).uppercase(Locale.forLanguageTag("es-ES")),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = paso.colorNumero,
-                        modifier = Modifier.weight(1f),
-                    )
-                    Text(stringResource(paso.etiqueta), style = AppTypography.caption, color = paso.colorEtiqueta)
+            Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(Spacing.xs)) {
+                Text(metodo.titulo, style = MaterialTheme.typography.headlineSmall, color = colores.onSurface)
+                if (estilo.masHabitual) {
+                    InfoChip(R.drawable.ic_check_circle, stringResource(R.string.cf_metodo_mas_habitual))
                 }
-                Spacer(Modifier.height(Spacing.xs))
-                Text(
-                    text = stringResource(paso.titulo),
-                    style = MaterialTheme.typography.headlineSmall,
-                    color = MaterialTheme.colorScheme.onSurface,
-                )
-                Spacer(Modifier.height(Spacing.xs))
-                Text(
-                    text = stringResource(paso.texto),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                if (paso.conChipsDonacion) {
-                    Spacer(Modifier.height(Spacing.sm))
-                    Row(horizontalArrangement = Arrangement.spacedBy(Spacing.sm)) {
-                        InfoChip(R.drawable.ic_check_circle, stringResource(R.string.cf_paso5_chip_aferesis))
-                        InfoChip(R.drawable.ic_check_circle, stringResource(R.string.cf_paso5_chip_aspiracion))
-                    }
+            }
+        }
+        Spacer(Modifier.height(Spacing.md))
+        Column(verticalArrangement = Arrangement.spacedBy(Spacing.sm)) {
+            metodo.apartados.forEach { apartado ->
+                Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                    Text(
+                        text = apartado.etiqueta.uppercase(espanol),
+                        style = MaterialTheme.typography.labelSmall,
+                        color = colores.primary,
+                    )
+                    Text(apartado.texto, style = MaterialTheme.typography.bodySmall, color = colores.onSurfaceVariant)
                 }
             }
         }
@@ -376,7 +325,7 @@ private fun FilaRequisito(@StringRes texto: Int) {
 private fun PantallaComoFuncionaPreview() {
     DonaVidaTheme {
         Surface(color = MaterialTheme.colorScheme.background) {
-            PantallaComoFunciona(onBuscarCentros = {})
+            ContenidoComoFunciona(metodos = emptyList(), onBuscarCentros = {})
         }
     }
 }

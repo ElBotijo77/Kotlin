@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generado por GeneraIcono.java. Gota (Material Symbols "bloodtype") y corazón
+     (Material Symbols "favorite"), licencia Apache 2.0. Zona segura: 66dp centrales. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#FF000000" android:fillType="evenOdd" android:pathData="M54,85Q43.38,85 36.29,77.72Q29.2,70.43 29.2,59.58Q29.2,51.83 35.36,42.72Q41.52,33.62 54,23Q66.48,33.62 72.64,42.72Q78.8,51.83 78.8,59.58Q78.8,70.43 71.71,77.72Q64.62,85 54,85ZM54,74.61L52.09,72.9Q48.76,69.9 46.59,67.73Q44.42,65.56 43.13,63.83Q41.85,62.1 41.34,60.65Q40.82,59.2 40.82,57.68Q40.82,54.59 42.9,52.51Q44.98,50.44 48.07,50.44Q49.78,50.44 51.33,51.16Q52.88,51.89 54,53.2Q55.12,51.89 56.67,51.16Q58.22,50.44 59.93,50.44Q63.02,50.44 65.1,52.51Q67.18,54.59 67.18,57.68Q67.18,59.2 66.66,60.65Q66.15,62.1 64.87,63.83Q63.58,65.56 61.41,67.73Q59.24,69.9 55.91,72.9L54,74.61Z" />
+</vector>

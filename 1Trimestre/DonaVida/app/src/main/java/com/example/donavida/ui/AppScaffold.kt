@@ -2,7 +2,6 @@ package com.example.donavida.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -37,7 +36,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
@@ -64,7 +62,6 @@ fun AppScaffold(
     rutaActual: String?,
     onPestanaPulsada: (Pestana) -> Unit,
     onNotificaciones: () -> Unit,
-    onPerfil: () -> Unit,
     content: @Composable (PaddingValues) -> Unit,
 ) {
     val pestanaActual = Pestana.deRuta(rutaActual)
@@ -76,7 +73,6 @@ fun AppScaffold(
                 AppTopBar(
                     seccion = stringResource(pestanaActual.etiqueta),
                     onNotificaciones = onNotificaciones,
-                    onPerfil = onPerfil,
                 )
             }
         },
@@ -97,7 +93,6 @@ fun AppScaffold(
 fun AppTopBar(
     seccion: String,
     onNotificaciones: () -> Unit,
-    onPerfil: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val colores = MaterialTheme.colorScheme
@@ -158,16 +153,8 @@ fun AppTopBar(
                 tint = colores.onSurfaceVariant,
             )
         }
-        val descripcionPerfil = stringResource(R.string.cd_perfil)
-        // Zona táctil de 44 dp aunque el avatar mida 32 dp.
-        Box(
-            modifier = Modifier
-                .size(44.dp)
-                .clip(CircleShape)
-                .clickable(role = Role.Button, onClick = onPerfil)
-                .semantics { contentDescription = descripcionPerfil },
-            contentAlignment = Alignment.Center,
-        ) {
+        // Solo decorativo: no hay pantalla de perfil (Mi donación ya no está en la app).
+        Box(modifier = Modifier.size(44.dp), contentAlignment = Alignment.Center) {
             Image(
                 painter = painterResource(R.drawable.avatar_placeholder),
                 contentDescription = null,
@@ -185,6 +172,6 @@ fun AppTopBar(
 @Composable
 private fun AppTopBarPreview() {
     DonaVidaTheme {
-        AppTopBar(seccion = "Inicio", onNotificaciones = {}, onPerfil = {})
+        AppTopBar(seccion = "Inicio", onNotificaciones = {})
     }
 }

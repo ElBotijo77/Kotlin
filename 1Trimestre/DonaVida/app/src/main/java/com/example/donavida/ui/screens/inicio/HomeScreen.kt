@@ -1,6 +1,7 @@
 package com.example.donavida.ui.screens.inicio
 
 import androidx.annotation.StringRes
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -31,8 +32,12 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -72,7 +77,6 @@ fun HomeRoute(
     contentPadding: PaddingValues,
     onFindCenter: () -> Unit,
     onSeeProcess: () -> Unit,
-    onMyDonation: () -> Unit,
     viewModel: HomeViewModel = viewModel(factory = HomeViewModel.Factory),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -81,7 +85,6 @@ fun HomeRoute(
         contentPadding = contentPadding,
         onFindCenter = onFindCenter,
         onSeeProcess = onSeeProcess,
-        onMyDonation = onMyDonation,
     )
 }
 
@@ -96,7 +99,6 @@ fun HomeScreen(
     uiState: HomeUiState,
     onFindCenter: () -> Unit,
     onSeeProcess: () -> Unit,
-    onMyDonation: () -> Unit,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(),
 ) {
@@ -113,10 +115,12 @@ fun HomeScreen(
     ) {
         item { GreetingHeader(userName = uiState.userName, redmoActive = uiState.redmoActive) }
         item { DonorCtaCard(onFindCenter = onFindCenter) }
+        // Debajo de la tarjeta de donante, no encima: así el botón "Buscar un centro cerca"
+        // se sigue viendo sin hacer scroll en un móvil de 6".
+        item { TarjetaAntesDeEmpezar() }
         item { StatVignette() }
         item { ProcessStepperCard(onSeeProcess = onSeeProcess) }
         item { ReassuranceBanner() }
-        item { RegisteredDonorCard(onMyDonation = onMyDonation) }
         item { ClosingImageCard() }
     }
 }
@@ -296,6 +300,56 @@ private fun DonorCtaCard(onFindCenter: () -> Unit, modifier: Modifier = Modifier
             onClick = onFindCenter,
             modifier = Modifier.fillMaxWidth(),
         )
+    }
+}
+
+// ---------------------------------------------------------------------------------------
+// 2b. Antes de empezar
+// ---------------------------------------------------------------------------------------
+
+/**
+ * Introducción compacta: qué son las células madre y por qué donarlas. Del primer apartado
+ * solo se ve el primer párrafo; "Leer más" despliega el resto.
+ */
+@Composable
+private fun TarjetaAntesDeEmpezar(modifier: Modifier = Modifier) {
+    val colores = MaterialTheme.colorScheme
+    var desplegada by rememberSaveable { mutableStateOf(false) }
+    SectionCard(modifier = modifier, contentPadding = Spacing.md) {
+        Text(
+            text = stringResource(R.string.inicio_intro_etiqueta),
+            style = MaterialTheme.typography.labelMedium,
+            color = colores.primary,
+            modifier = Modifier.semantics { heading() },
+        )
+        Spacer(Modifier.height(Spacing.sm))
+        ApartadoIntro(R.string.inicio_intro_que_son_titulo, R.string.inicio_intro_que_son_texto)
+        AnimatedVisibility(visible = desplegada) {
+            Text(
+                text = stringResource(R.string.inicio_intro_que_son_texto2),
+                style = MaterialTheme.typography.bodySmall,
+                color = colores.primary,
+                modifier = Modifier.padding(top = Spacing.sm),
+            )
+        }
+        TextButton(
+            onClick = { desplegada = !desplegada },
+            contentPadding = PaddingValues(horizontal = 0.dp),
+        ) {
+            Text(
+                text = stringResource(if (desplegada) R.string.inicio_intro_leer_menos else R.string.inicio_intro_leer_mas),
+                style = MaterialTheme.typography.labelMedium,
+            )
+        }
+        ApartadoIntro(R.string.inicio_intro_por_que_titulo, R.string.inicio_intro_por_que_texto)
+    }
+}
+
+@Composable
+private fun ApartadoIntro(@StringRes titulo: Int, @StringRes texto: Int) {
+    Column(verticalArrangement = Arrangement.spacedBy(Spacing.xs)) {
+        Text(stringResource(titulo), style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurface)
+        Text(stringResource(texto), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 
@@ -516,59 +570,7 @@ private fun ReassuranceBanner(modifier: Modifier = Modifier) {
 }
 
 // ---------------------------------------------------------------------------------------
-// 6. Ya soy donante
-// ---------------------------------------------------------------------------------------
-
-@Composable
-private fun RegisteredDonorCard(onMyDonation: () -> Unit, modifier: Modifier = Modifier) {
-    val colores = MaterialTheme.colorScheme
-    SectionCard(modifier = modifier) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(
-                painter = painterResource(R.drawable.ic_badge),
-                contentDescription = null,
-                tint = colores.primary,
-                modifier = Modifier.size(16.dp),
-            )
-            Spacer(Modifier.width(Spacing.xs + 2.dp))
-            Text(
-                text = stringResource(R.string.inicio_comunidad_etiqueta),
-                style = MaterialTheme.typography.labelSmall,
-                color = colores.primary,
-                modifier = Modifier.weight(1f),
-            )
-            Icon(
-                painter = painterResource(R.drawable.ic_lock),
-                contentDescription = null,
-                tint = colores.outlineVariant,
-                modifier = Modifier.size(20.dp),
-            )
-        }
-        Spacer(Modifier.height(Spacing.md))
-        Text(
-            text = stringResource(R.string.inicio_comunidad_titulo),
-            style = MaterialTheme.typography.headlineSmall,
-            color = colores.onSurface,
-            modifier = Modifier.semantics { heading() },
-        )
-        Spacer(Modifier.height(Spacing.sm))
-        Text(
-            text = stringResource(R.string.inicio_comunidad_texto),
-            style = MaterialTheme.typography.bodyMedium,
-            color = colores.onSurfaceVariant,
-        )
-        Spacer(Modifier.height(Spacing.lg))
-        TonalPillButton(
-            text = stringResource(R.string.inicio_comunidad_boton),
-            icon = R.drawable.ic_volunteer_activism,
-            onClick = onMyDonation,
-            modifier = Modifier.fillMaxWidth(),
-        )
-    }
-}
-
-// ---------------------------------------------------------------------------------------
-// 7. Cierre
+// 6. Cierre
 // ---------------------------------------------------------------------------------------
 
 @Composable
@@ -621,7 +623,6 @@ private fun HomeScreenPreview() {
             uiState = HomeUiState(userName = "Elena", redmoActive = true),
             onFindCenter = {},
             onSeeProcess = {},
-            onMyDonation = {},
         )
     }
 }
@@ -662,12 +663,6 @@ private fun ProcessStepperCardPreview() {
 @Composable
 private fun ReassuranceBannerPreview() {
     DonaVidaTheme { ReassuranceBanner(modifier = Modifier.padding(Spacing.margin)) }
-}
-
-@Preview(showBackground = true, backgroundColor = 0xFFF3FAFF)
-@Composable
-private fun RegisteredDonorCardPreview() {
-    DonaVidaTheme { RegisteredDonorCard(onMyDonation = {}, modifier = Modifier.padding(Spacing.margin)) }
 }
 
 @Preview(showBackground = true, backgroundColor = 0xFFF3FAFF)
