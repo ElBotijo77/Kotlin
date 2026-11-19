@@ -1,15 +1,20 @@
 [
   {
     "id": "timothy-ray-brown",
-    "titulo": "Timothy Ray Brown, \"el paciente de Berlín\"",
-    "subtitulo": "Berlín, 2007",
-    "texto": "Recibió un trasplante de células madre hematopoyéticas para tratar una leucemia mieloide aguda. Su donante tenía una mutación genética poco frecuente (CCR5-Δ32) que impide que el VIH entre en los glóbulos blancos, y se convirtió en la primera persona del mundo curada del VIH. Falleció en 2020 por una recaída de la leucemia, sin rastro del virus."
+    "titulo": "Timothy Ray Brown (\"El Paciente de Berlín\")",
+    "texto": "Fue la primera persona en el mundo en curarse del VIH tras recibir en 2007 un trasplante de células madre hematopoyéticas para tratar una leucemia mieloide aguda. Su donante tenía una mutación genética rara (CCR5∆32) que impide que el virus entre a los glóbulos blancos."
   },
   {
     "id": "diego",
-    "titulo": "Diego",
-    "subtitulo": "Alcuéscar (Cáceres), octubre de 2026",
-    "texto": "Con 5 años y enfermo de leucemia, recibió en el Hospital La Paz de Madrid un trasplante haploidéntico (compatible al 50 %) donado por su madre, después de una campaña de movilización en la que no apareció un donante compatible al 100 % en los registros.",
+    "titulo": "El pequeño Diego",
+    "subtitulo": "España, octubre de 2026",
+    "texto": "Con 5 años de edad, recibió un trasplante haploidéntico (compatibilidad del 50%) donado por su propia madre en Madrid. Tras una campaña de movilización donde no se halló un donante 100% compatible en los registros, el procedimiento exitoso renovó la esperanza de la familia en su recuperación.",
     "fuenteUrl": "https://www.telecinco.es/noticias/salud/20261008/diego-nino-leucemia-recibe-trasplante-medula-osea-donada-madre_18_020390741.html"
+  },
+  {
+    "id": "victoria-esperanza",
+    "titulo": "Victoria Esperanza",
+    "subtitulo": "Sevilla, España, enero de 2026",
+    "texto": "Esta niña malagueña de 6 años logró superar con éxito un trasplante de médula ósea en Sevilla, un caso que se viralizó y generó gran alegría tras su evolución favorable."
   }
 ]

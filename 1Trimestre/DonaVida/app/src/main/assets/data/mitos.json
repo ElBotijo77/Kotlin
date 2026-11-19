@@ -3,25 +3,25 @@
     "id": "pregunta-cambiar-opinion",
     "esMito": false,
     "enunciado": "¿Puedo cambiar de opinión?",
-    "respuesta": "Sí. Inscribirse en el registro y donar es completamente voluntario, y puedes cambiar de opinión en cualquier momento. Si ya te han seleccionado como donante, avisa cuanto antes, porque el paciente empieza a prepararse para el trasplante."
+    "respuesta": "Sí. Unirse al registro y donar es completamente voluntario. Puedes cambiar de opinión en cualquier momento del proceso."
   },
   {
     "id": "pregunta-riesgo",
     "esMito": false,
-    "enunciado": "¿Hay algún riesgo?",
-    "respuesta": "En general es un procedimiento seguro, aunque puede tener efectos secundarios leves según el método:",
+    "enunciado": "¿Hay algún riesgo en la donación de médula?",
+    "respuesta": "En general es seguro pero según el método empleado hay algunos efectos secundarios.",
     "puntos": [
       {
-        "texto": "Médula ósea: molestias, moratones e irritación en la zona de la cadera durante unos días.",
-        "destacado": "Médula ósea:"
+        "texto": "PUNCIÓN: Moratones e irritación",
+        "destacado": "PUNCIÓN:"
       },
       {
-        "texto": "Aféresis: síntomas parecidos a los de la gripe y dolor de huesos, causados por la medicación previa.",
-        "destacado": "Aféresis:"
+        "texto": "AFÉRESIS: Por la medicación previa",
+        "destacado": "AFÉRESIS:"
       },
       {
-        "texto": "Cordón umbilical: sin riesgo para la madre ni para el bebé.",
-        "destacado": "Cordón umbilical:"
+        "texto": "CORDÓN: Sin riesgo",
+        "destacado": "CORDÓN:"
       }
     ]
   },
@@ -29,42 +29,42 @@
     "id": "pregunta-quien-recibe",
     "esMito": false,
     "enunciado": "¿Puedo saber quién recibirá mis células madre?",
-    "respuesta": "No. La donación es anónima y confidencial: los registros, como el REDMO, protegen los datos del donante y del paciente. Solo se conoce la identidad cuando la donación es entre familiares."
+    "respuesta": "Principio de anonimato y confidencialidad, muestras o datos del donante en registros como REDMO y único escenario en el que se conoce la identidad cuando se trata de una donación emparentada."
   },
   {
     "id": "pregunta-pago",
     "esMito": false,
     "enunciado": "¿Me pagarán por donar?",
-    "respuesta": "No se paga por donar. Pero si te llaman para hacerlo, se te reembolsan todos los gastos, como los del viaje."
+    "respuesta": "No se te pagará por la propia donación de células madre. Si te citan para donar de células madre, se te reembolsarán todos los gastos. Por ejemplo, los gastos de viaje."
   },
   {
     "id": "mito-sin-celulas",
     "esMito": true,
-    "enunciado": "Te quedas sin células madre o se debilita tu sistema inmunitario.",
-    "respuesta": "El cuerpo regenera las células extraídas en pocas semanas, y la donación no debilita el sistema inmunitario a largo plazo."
+    "enunciado": "Te quedas sin células madre o tu sistema inmune se debilita tras la donación.",
+    "respuesta": "El cuerpo del donante regenera las células madre extraídas en cuestión de pocas semanas. La donación no altera ni debilita el sistema inmunitario a largo plazo."
   },
   {
     "id": "mito-doloroso-hueso",
     "esMito": true,
-    "enunciado": "Donar es doloroso y te quitan parte del hueso.",
-    "respuesta": "No se extrae hueso. La mayoría de las donaciones se hacen por aféresis, a partir de la sangre. Cuando se extrae médula de la cadera, se hace con anestesia, así que no duele durante el procedimiento."
+    "enunciado": "El trasplante de células madre se trasplanta mediante un proceso doloroso y te quitan parte del hueso.",
+    "respuesta": "Esto es falso, ya que la mayoría de donaciones se hacen mediante aféresis (extracción de sangre), y aunque también se puede realizar por punción del hueso de la cadera el proceso no es doloroso porque se usa anestesia."
   },
   {
     "id": "mito-solo-familiares",
     "esMito": true,
     "enunciado": "Solo se puede donar a familiares directos.",
-    "respuesta": "Solo entre un 25 y un 30 % de los pacientes encuentra un donante compatible en su familia. El 70 % restante depende de donantes no emparentados inscritos en los registros internacionales."
+    "respuesta": "Solo un 25-30 % de los pacientes encuentra un donante compatible dentro de su familia. El 70 % restante depende de donantes anónimos no emparentados inscritos en los registros internacionales."
   },
   {
     "id": "mito-ingreso-largo",
     "esMito": true,
-    "enunciado": "Donar requiere un ingreso largo en el hospital.",
-    "respuesta": "La donación por sangre periférica es ambulatoria y dura unas horas. La extracción de médula suele requerir, como mucho, un ingreso de 24 horas para observación."
+    "enunciado": "La donación requiere un ingreso hospitalario prolongado.",
+    "respuesta": "La extracción por sangre periférica es un proceso ambulatorio que dura entre 3 y 5 horas. En el caso de extracción de médula ósea, suele requerir como máximo un ingreso de 24 horas para observación."
   },
   {
     "id": "mito-llamada-inmediata",
     "esMito": true,
-    "enunciado": "Si te inscribes en el registro, te llamarán para donar enseguida.",
-    "respuesta": "La compatibilidad genética entre personas que no son familia es muy difícil de encontrar. Puedes estar inscrito durante años, o toda la vida, sin llegar a ser compatible con ningún paciente."
+    "enunciado": "Si te inscribes en el registro de donantes, te llamarán para donar de inmediato.",
+    "respuesta": "La compatibilidad genética entre personas no emparentadas es muy difícil de encontrar. Es posible estar inscrito durante años o toda la vida y nunca llegar a ser compatible con un paciente que lo necesite."
   }
 ]

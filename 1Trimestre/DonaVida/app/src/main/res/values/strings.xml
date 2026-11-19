@@ -32,9 +32,9 @@
     <string name="sm_mitos_texto">Lo que se dice y lo que es verdad</string>
 
     <!-- Saber más: problemas (los puntos están en assets/data/problemas.json) -->
-    <string name="pr_actual_titulo">Tratamientos actuales</string>
+    <string name="pr_actual_titulo">Enfermedades hematológicas y oncología</string>
     <string name="pr_actual_insignia">En uso</string>
-    <string name="pr_actual_intro">El trasplante de células madre hematopoyéticas ya se usa para tratar:</string>
+    <string name="pr_actual_intro">Las células madre ofrecen alternativas terapéuticas y de investigación para solucionar y tratar una amplia variedad de condiciones médicas:</string>
     <string name="pr_investigacion_titulo">En investigación</string>
     <string name="pr_investigacion_insignia">En investigación</string>
     <string name="pr_investigacion_intro">Estas aplicaciones se están estudiando, sobre todo en ensayos clínicos, con otros tipos de células madre. Todavía no son tratamientos habituales y no dependen de la donación de médula.</string>
@@ -66,15 +66,15 @@
     <string name="inicio_chip_registro">Registro REDMO</string>
     <string name="inicio_cta_boton">Buscar un centro cerca</string>
 
-    <!-- Inicio: antes de empezar (docs/contenido.md, sección 1) -->
+    <!-- Inicio: antes de empezar (docs/contenido_clientes.txt) -->
     <string name="inicio_intro_etiqueta">Antes de empezar</string>
     <string name="inicio_intro_que_son_titulo">¿Qué son las células madre?</string>
-    <string name="inicio_intro_que_son_texto">Las células madre son células indiferenciadas e inmaduras, es decir, todavía no están especializadas en ninguna función. Pueden dividirse de forma indefinida y transformarse en células especializadas, como neuronas, glóbulos rojos o células del hígado.</string>
+    <string name="inicio_intro_que_son_texto">Las células madre son células indiferenciadas e inmaduras, es decir, no están especializadas en ninguna función. Estas se encargan de transformarse o reproducirse de forma indefinida para dar células especializadas en una determinada función; como son las neuronas, glóbulos rojos, hepáticas,…</string>
     <string name="inicio_intro_que_son_texto2">En la donación de médula se donan células madre hematopoyéticas, que son las que forman la sangre.</string>
     <string name="inicio_intro_leer_mas">Leer más</string>
     <string name="inicio_intro_leer_menos">Leer menos</string>
     <string name="inicio_intro_por_que_titulo">¿Por qué es importante donarlas?</string>
-    <string name="inicio_intro_por_que_texto">Donar células madre permite regenerar el sistema sanguíneo e inmunitario de personas con enfermedades graves, recuperar las células destruidas durante los tratamientos contra el cáncer y contribuir a que la investigación médica descubra nuevos tratamientos.</string>
+    <string name="inicio_intro_por_que_texto">Donar células madre es fundamental porque permite regenerar el sistema sanguíneo e inmunitario en personas con diversas enfermedades, restablecer las células destruidas durante los tratamientos contra el cáncer y hacer avanzar la investigación médica para descubrir nuevas curas y tratamientos preventivos.</string>
 
     <!-- Inicio: dato -->
     <string name="inicio_dato_cifra">1 entre 4.000</string>

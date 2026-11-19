@@ -2,50 +2,50 @@
   {
     "id": "canceres-sangre",
     "bloque": "actual",
-    "titulo": "Cánceres de la sangre",
-    "texto": "Leucemias, linfomas y mieloma múltiple. También se emplea en el neuroblastoma.",
+    "titulo": "Cánceres y hematologías malignas",
+    "texto": "Se emplean en la terapia de leucemias, linfomas, neuroblastoma y mieloma múltiple.",
     "icono": "bloodtype"
   },
   {
     "id": "enfermedades-sangre",
     "bloque": "actual",
-    "titulo": "Enfermedades de la sangre no cancerosas",
-    "texto": "Anemia de células falciformes, inmunodeficiencias y algunas alteraciones congénitas del metabolismo.",
+    "titulo": "Afecciones sanguíneas no malignas",
+    "texto": "Tratan problemas como la anemia de células falciformes, inmunodeficiencias y alteraciones congénitas del metabolismo.",
     "icono": "healing"
   },
   {
     "id": "recuperar-sistema-sanguineo",
     "bloque": "actual",
-    "titulo": "Recuperar el sistema sanguíneo",
-    "texto": "Permite reconstruir la sangre y las defensas después de una quimioterapia o radioterapia intensas.",
+    "titulo": "Restauración del sistema sanguíneo",
+    "texto": "Permiten al paciente reconstruir y mantener su sistema linfohematopoyético después de haber sido destruido o afectado por tratamientos de radioterapia o quimioterapia.",
     "icono": "autorenew"
   },
   {
     "id": "neurologicas",
     "bloque": "investigacion",
-    "titulo": "Enfermedades neurológicas",
-    "texto": "El sistema nervioso se regenera muy poco, y se investiga cómo renovar neuronas en el Parkinson, el Alzheimer o la enfermedad de Huntington.",
+    "titulo": "Enfermedades neurodegenerativas y neurológicas",
+    "texto": "Al contar el sistema nervioso con una capacidad limitada de regeneración, la terapia celular ayuda a renovar o generar células neuronales.\nPermiten tratar afecciones neurológicas como la enfermedad de Parkinson (ayudando a restaurar las vías dopaminérgicas y la regulación de dopamina), el Alzheimer y la corea de Huntington.",
     "icono": "psychology"
   },
   {
     "id": "diabetes",
     "bloque": "investigacion",
-    "titulo": "Diabetes",
-    "texto": "Es una vía prometedora para tratar la diabetes mellitus.",
+    "titulo": "Enfermedades endocrinológicas y metabólicas",
+    "texto": "Representan una alternativa prometedora para el tratamiento y posible cura de la diabetes mellitus.",
     "icono": "monitor_heart"
   },
   {
     "id": "corazon",
     "bloque": "investigacion",
-    "titulo": "Corazón",
-    "texto": "Se estudia su uso tras un infarto de miocardio.",
+    "titulo": "Enfermedades cardíacas",
+    "texto": "Se utilizan en el tratamiento de patologías del corazón, incluyendo el infarto de miocardio.",
     "icono": "favorite"
   },
   {
     "id": "regeneracion-tejidos",
     "bloque": "investigacion",
-    "titulo": "Regeneración de tejidos",
-    "texto": "Podrían acelerar la curación de heridas y fracturas y ayudar a reconstruir tejidos y órganos dañados.",
+    "titulo": "Regeneración de tejidos, lesiones y órganos",
+    "texto": "Promueven una recuperación más rápida y eficiente en heridas, procesos de cicatrización y fracturas gracias a su capacidad proliferativa.\nSirven como fuente para la reconstrucción de tejidos y órganos dañados por accidentes o traumatismos.",
     "icono": "healing"
   }
 ]
